@@ -15,7 +15,7 @@ public class Banana implements Fruit {
 
     @Override
     public int getPriceInCents() {
-        return this.pricePerPoundInCents * (this.weightInOunces / 16);
+        return (int) Math.round(this.pricePerPoundInCents * (this.weightInOunces / 16.0));
     }
 
     public void setWeightInOunces(int weightInOunces) {

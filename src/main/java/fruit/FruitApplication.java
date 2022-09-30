@@ -30,9 +30,28 @@ public class FruitApplication {
         for (Apple apple : apples) {
             System.out.println("apple = " + apple.getType()+" "+apple.getWeightInGrams()+" grams");
         }
+        System.out.println();
+
     }
 
     public static void applesToOranges() {
+        List<Fruit> basketOfFruit = new ArrayList<>();
+        basketOfFruit.add(new Banana(4, 59));
+        basketOfFruit.add(new Orange(4, 345));
+        basketOfFruit.add(new Apple(AppleType.FUJI, 157, 299));
+        basketOfFruit.add(new Banana(4, 59));
+        basketOfFruit.add(new Orange(5, 345));
+        basketOfFruit.add(new Apple(AppleType.GRANNY_SMITH, 161, 299));
+        basketOfFruit.add(new Banana(5, 79));
+        basketOfFruit.add(new Apple(AppleType.GRANNY_SMITH, 150, 299));
+        basketOfFruit.add(new Orange(5, 345));
+
+        System.out.println("Unsorted Fruit Basket");
+        for (Fruit fruit : basketOfFruit) {
+            System.out.println(fruit.getClass() + " = " + fruit.getWeightInOunces() + ", " + fruit.getPriceInCents() + "¢");
+        }
+        System.out.println();
+
 
     }
 }

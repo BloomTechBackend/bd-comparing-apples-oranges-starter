@@ -38,11 +38,11 @@ public class Apple implements Fruit {
 
     @Override
     public int getWeightInOunces() {
-        return (int) Math.round(this.weightInGrams * 28.3495);
+        return (int) Math.round(this.weightInGrams / 28.3495);
     }
 
     @Override
     public int getPriceInCents() {
-        return (int) Math.round(this.pricePerPoundInCents * (this.weightInGrams / 453.592));
+        return (int) Math.round(this.pricePerPoundInCents * (this.weightInGrams * 0.0022));
     }
 }
